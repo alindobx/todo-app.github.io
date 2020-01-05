@@ -43,3 +43,13 @@
     font-size: 12px;
     line-height: 1.42857;
 }
+
+.fa-times-circle:before {
+    color: #bc0000;
+    font-size:2em;
+}
+
+.strike {
+    color: #9f9f9f;
+    text-decoration: line-through;
+}
