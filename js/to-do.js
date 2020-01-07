@@ -39,6 +39,11 @@ function addToDo(e) {
     }
 }
 
+data.forEach(user =>{
+    divMaker(user);
+});
+
+
 function removeToDo (e){
     const remove = e.target.classList.contains('delete');
     const removeDiv = e.target.parentElement;
