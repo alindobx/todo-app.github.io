@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 *{
     font-family: 'Open Sans', sans-serif;
-
 }
 #main {
     border-radius: .5em;
@@ -19,6 +18,11 @@
 #add-form {
     padding:1em;
 }
+
+.fas {
+    cursor: pointer;
+}
+
 .form-check {
     border-bottom: 1px solid lightgray;
     padding: 1em;
