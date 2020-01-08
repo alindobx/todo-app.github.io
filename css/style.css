@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;|
 }
+
+body {
+    background-color: #14639b !important;
+}
+
 #main {
     border-radius: .5em;
     margin: 1em auto;
     border: 1px solid #dadce0;
     max-width: 600px;
+    background-color: #fff;
 
 }
 #header {
