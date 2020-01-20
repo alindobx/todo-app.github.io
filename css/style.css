@@ -63,3 +63,19 @@ body {
     color: #9f9f9f;
     text-decoration: line-through;
 }
+
+#header h1 {
+    display:inline-block
+}
+.done {
+    color: rgba(159, 19, 26, 0.54);
+    text-decoration: line-through;
+}
+.remove {
+    display:none;
+
+}
+
+#completeBtn {
+    float: right;
+}

@@ -1,9 +1,13 @@
 const data = JSON.parse(localStorage.getItem("input"));
 const toDoList = document.getElementById("todo-list");
 const addBtn = document.getElementById("add-btn");
+const getCompletedButton = document.getElementById('completeBtn');
 const toDoArr = [];
 
 addBtn.addEventListener("click", createTo);
+getCompletedButton.addEventListener('click',()=>{
+  document.getElementById('completed').classList.toggle('remove');
+});
 
 localStorage.getItem("input") === null
   ? console.log("true")
@@ -13,36 +17,40 @@ localStorage.getItem("input") === null
 
 function renderToDo(text) {
   const div = document.createElement("div");
-  div.className = "form-check";
+  div.className = "form-check col-md-12";
 
   const uniqueIdentifier = Math.floor(Math.random() * new Date().getTime());
 
   toDoList.appendChild(div);
 
-  div.appendChild(createInput(uniqueIdentifier));
+  div.appendChild(createInput(uniqueIdentifier,text));
 
   div.appendChild(createCheckBox(text, uniqueIdentifier));
 
   div.appendChild(createDeleteIcon(text));
 }
 
-function createInput(id) {
+function createInput(id,text) {
   const input = document.createElement("INPUT");
   input.id = `checkbox-${id}`;
   input.type = "checkbox";
   input.className = "form-check-input";
 
-  input.onclick = function(e) {
+  input.addEventListener('click', function(e) {
     e.target.nextElementSibling.classList.toggle("strike");
-  };
+    const insertDiv = document.createElement('div');
+    insertDiv.textContent = text;
+    document.getElementById('time').innerHTML = new Date();
+    document.getElementById('completed').append(insertDiv);
+  });
   return input;
 }
-
 function createCheckBox(text, id) {
   const label = document.createElement("LABEL");
   label.className = "form-check-label";
   label.setAttribute("for", `checkbox-${id}`);
   label.textContent = text;
+
   return label;
 }
 

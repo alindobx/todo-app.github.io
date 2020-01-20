@@ -15,16 +15,21 @@
   <body>
     <header></header>
     <main class="container">
-        <section id="main">
-            <div id="header" class="header"><h1>To-Do List</h1></div>
-            <form id ="add-form">
+        <section id="main" class="row">
+            <div id="header" class="header col-md-12">
+                <h1>To-Do List</h1>
+                <button id="completeBtn" class="btn btn-secondary btn-sm">Completed</button>
+            </div>
+            <form id ="add-form" class="col-md-12">
                 <div class="form-group form-inline">
                      <label for="input-text" class="sr-only"></label>
                      <input type="text" class="form-control" id="input-text" placeholder="What to do today?">
                      <button type="submit" class="btn btn-primary" id="add-btn">Add</button>
                 </div>
                 <div id="todo-list"> </div>
+                <div id="completed" class="remove done"><div id="time"></div></div>
             </form>
+
         </section>
     </main>
   </body>
